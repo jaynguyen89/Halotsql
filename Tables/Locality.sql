@@ -6,6 +6,7 @@ CREATE TABLE [dbo].[Locality]
 	[Name] NVARCHAR(80) NOT NULL,
 	[Region] TINYINT NOT NULL DEFAULT 0,
 	[Code] NVARCHAR(5) NOT NULL,
+	[TelephoneCode] NVARCHAR(5) NOT NULL,
 	[PrimaryCurrencyId] NVARCHAR(65) NOT NULL,
 	[SecondaryCurrencyId] NVARCHAR(65) DEFAULT NULL,
 	CONSTRAINT [PK_Locality_Id] PRIMARY KEY ([Id] ASC),

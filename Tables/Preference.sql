@@ -8,8 +8,7 @@
 	[TimeFormat] TINYINT NOT NULL DEFAULT 0,
 	[NumberFormat] TINYINT NOT NULL DEFAULT 0,
 	[UnitSystem] TINYINT NOT NULL DEFAULT 0,
-	[Privacy] NVARCHAR(1000) NOT NULL, -- JSON string to control the display of profile information
-	[Security] NVARCHAR(1000) NOT NULL, -- JSON string to control login failures, lockouts, trusted devices
+	[Privacy] NVARCHAR(4000) NOT NULL, -- JSON string to control the display of profile information
 	[UpdatedOn] DATETIME2(7) NOT NULL DEFAULT (GETDATE()),
 	CONSTRAINT [PK_Preference_Id] PRIMARY KEY ([Id] ASC),
 	CONSTRAINT [FK_Preference_Account_AccountId] FOREIGN KEY ([AccountId]) REFERENCES [dbo].[Account] ([Id])

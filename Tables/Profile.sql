@@ -3,7 +3,7 @@
 	[Id] NVARCHAR(65) UNIQUE NOT NULL DEFAULT (NEWID()),
 	[AccountId] NVARCHAR(65) NOT NULL,
 	[PhoneNumber] NVARCHAR(50) DEFAULT NULL,
-    [PhoneNumberToken] NVARCHAR(30) DEFAULT NULL,
+    [PhoneNumberToken] NVARCHAR(10) DEFAULT NULL,
 	[PhoneNumberTokenTimestamp] DATETIME2(7) DEFAULT NULL,
 	[PhoneNumberConfirmed] BIT NOT NULL DEFAULT 0,
 	[GivenName] NVARCHAR(100) DEFAULT NULL,
