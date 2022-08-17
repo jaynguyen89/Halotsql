@@ -14,7 +14,7 @@
     [OneTimePasswordTimestamp] DATETIME2(7) DEFAULT NULL,
 	[TwoFactorEnabled] BIT NOT NULL DEFAULT 0,
 	[TwoFactorKeys] NVARCHAR(50) DEFAULT NULL,
-	[TwoFactorVerifyingToken] NVARCHAR(200) DEFAULT NULL,
+	[TwoFactorVerifyingTokens] NVARCHAR(200) DEFAULT NULL,
 	[RecoveryToken] NVARCHAR(50) DEFAULT NULL,
 	[RecoveryTokenTimestamp] DATETIME2(7) DEFAULT NULL,
 	[LoginFailedCount] TINYINT NOT NULL DEFAULT 0,
