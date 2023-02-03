@@ -1,6 +1,13 @@
-﻿-- Currencies ----------------------------------------------------------
+﻿TRUNCATE TABLE [dbo].[LocalityDivision];
+TRUNCATE TABLE [dbo].[Locality];
+TRUNCATE TABLE [dbo].[Currency];
+TRUNCATE TABLE [dbo].[Role];
 
--- SET IDENTITY_INSERT [dbo].[Currency] ON;
+
+------------------------------------------------------------------------
+-- Currencies ----------------------------------------------------------
+
+SET IDENTITY_INSERT [dbo].[Currency] ON;
 
 INSERT INTO [dbo].[Currency] (
 	[Id],
@@ -38,11 +45,14 @@ INSERT INTO [dbo].[Currency] (
 	'$'
 );
 
--- SET IDENTITY_INSERT [dbo].[Currency] OFF;
+SET IDENTITY_INSERT [dbo].[Currency] OFF;
 
+
+
+------------------------------------------------------------------------
 -- Localities ----------------------------------------------------------
 
--- SET IDENTITY_INSERT [dbo].[Locality] ON;
+SET IDENTITY_INSERT [dbo].[Locality] ON;
 
 INSERT INTO [dbo].[Locality] (
 	[Id],
@@ -64,9 +74,12 @@ INSERT INTO [dbo].[Locality] (
 	[SecondaryCurrencyId]
 ) VALUES ('a6a8bba96f2740f4911dd2ea2097ba2f', N'Việt Nam', 0, 'VNM', '84', '36c00e7676a54bb6889b82b0fca9d660', '44defa6d267442278629bbc86df6de44');
 
--- SET IDENTITY_INSERT [dbo].[Locality] OFF;
+SET IDENTITY_INSERT [dbo].[Locality] OFF;
 
--- Locality Divisions ----------------------------------------------------------
+
+
+------------------------------------------------------------------------
+-- Locality Divisions --------------------------------------------------
 
 -- Australia States
 INSERT INTO [dbo].[LocalityDivision] (
@@ -190,7 +203,10 @@ INSERT INTO [dbo].[LocalityDivision] (
 	'TNH'
 );
 
--- Roles ----------------------------------------------------------
+
+
+------------------------------------------------------------------------
+-- Roles ---------------------------------------------------------------
 
 INSERT INTO [dbo].[Role] (
 	[Name],
