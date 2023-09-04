@@ -1,10 +1,12 @@
 ﻿CREATE TABLE [dbo].[Account]
 (
 	[Id] NVARCHAR(65) UNIQUE NOT NULL DEFAULT (NEWID()),
-	[UniqueIdentifier] NVARCHAR(40) NOT NULL,
+	[UniqueCode] NVARCHAR(40) NOT NULL,
 	[EmailAddress] NVARCHAR(100) DEFAULT NULL,
 	[EmailAddressToken] NVARCHAR(50) DEFAULT NULL,
 	[EmailAddressTokenTimestamp] DATETIME2(7) DEFAULT NULL,
+	[SecretCode] NVARCHAR(10) DEFAULT NULL,
+	[SecretCodeTimestamp] DATETIME2(7) DEFAULT NULL,
 	[EmailConfirmed] BIT NOT NULL DEFAULT 0,
 	[Username] NVARCHAR(50) DEFAULT NULL,
 	[NormalizedUsername] NVARCHAR(50) DEFAULT NULL,
