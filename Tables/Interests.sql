@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[Interest]
+(
+	[Id] NVARCHAR(65) UNIQUE NOT NULL DEFAULT (NEWID()),
+	[ParentId] NVARCHAR(65) DEFAULT NULL,
+	[Name] NVARCHAR(60) NOT NULL,
+	[Description] NVARCHAR(250) DEFAULT NULL,
+	CONSTRAINT [PK_Interest_Id] PRIMARY KEY ([Id] ASC),
+	CONSTRAINT [FK_Interest_ParentId_Id] FOREIGN KEY ([ParentId]) REFERENCES [dbo].[Interest] ([Id])
+)

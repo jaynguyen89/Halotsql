@@ -72,6 +72,7 @@
     <Build Include="Tables\ProfileAddress.sql" />
     <Build Include="Tables\Currency.sql" />
     <Build Include="Tables\Address.sql" />
+    <Build Include="Tables\Interests.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\EarlyData.PostDeployment.sql">
