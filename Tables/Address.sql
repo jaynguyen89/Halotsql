@@ -3,7 +3,7 @@
 	[Id] NVARCHAR(65) UNIQUE NOT NULL DEFAULT (NEWID()),
 	[BuildingName] NVARCHAR(50) DEFAULT NULL,
 	[PoBoxNumber] NVARCHAR(100) DEFAULT NULL,
-	[StreetAddress] NVARCHAR(100) DEFAULT NULL,
+	[StreetAddress] NVARCHAR(100) NOT NULL,
 	[Group] NVARCHAR(100) DEFAULT NULL, --To
 	[Lane] NVARCHAR(100) DEFAULT NULL, --Ngo, ngach
 	[Quarter] NVARCHAR(100) DEFAULT NULL, --Khu pho
@@ -15,8 +15,8 @@
 	[Suburb] NVARCHAR(100) DEFAULT NULL,
 	[Postcode] NVARCHAR(20) DEFAULT NULL,
 	[City] NVARCHAR(100) DEFAULT NULL,
-	[DivisionId] NVARCHAR(65) DEFAULT NULL, --Province/State/Territory
-	[CountryId] NVARCHAR(65) DEFAULT NULL,
+	[DivisionId] NVARCHAR(65) NOT NULL, --Province/State/Territory
+	[CountryId] NVARCHAR(65) NOT NULL,
     [Variant] TINYINT NOT NULL DEFAULT 0,
 	CONSTRAINT [PK_Address_Id] PRIMARY KEY ([Id] ASC),
 	CONSTRAINT [FK_Address_Locality_CountryId] FOREIGN KEY ([CountryId]) REFERENCES [dbo].[Locality] ([Id]),
