@@ -56,7 +56,8 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="Tables" />
-    <Folder Include="Scripts" />
+    <Folder Include="Profiles" />
+    <Folder Include="PostDeployment" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Account.sql" />
@@ -73,11 +74,7 @@
     <Build Include="Tables\Currency.sql" />
     <Build Include="Tables\Address.sql" />
     <Build Include="Tables\Interests.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <PostDeploy Include="Scripts\EarlyData.PostDeployment.sql">
-      <CopyToOutputDirectory>DoNotCopy</CopyToOutputDirectory>
-    </PostDeploy>
+    <Build Include="Tables\Occupation.sql" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Condition="'$(NetCoreBuild)' == 'true'">
@@ -87,8 +84,26 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="HalogenDatabase.local.linux.xml" />
-    <None Include="Scripts\HalogenDatabase.local.linux.publish.xml" />
-    <None Include="Scripts\HalogenDatabase.local.windows.publish.xml" />
+    <None Include="Profiles\HalogenDatabase.local.linux.publish.xml" />
+    <None Include="Profiles\HalogenDatabase.local.windows.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PostDeployment\Currency.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PostDeployment\Interest.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PostDeployment\Locality.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PostDeployment\LocalityDivision.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PostDeployment\Role.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="PostDeployment\Occupation.PostDeployment.sql" />
   </ItemGroup>
   <Import Project="$(NETCoreTargetsPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" Condition="'$(NetCoreBuild)' == 'true'" />
   <Target Name="BeforeBuild">
