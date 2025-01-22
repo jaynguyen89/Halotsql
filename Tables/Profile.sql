@@ -18,8 +18,10 @@
 	[Ethnicity] TINYINT NOT NULL DEFAULT 0,
 	[Company] NVARCHAR(100) DEFAULT NULL,
 	[JobTitle] NVARCHAR(100) DEFAULT NULL,
+	[OccupationId] NVARCHAR(65) DEFAULT NULL,
 	[Websites] NVARCHAR(2000) DEFAULT NULL, -- JSON array: [{url, label, privacy}]
 	[Interests] NVARCHAR(1500) DEFAULT NULL, -- JSON array: [string]
 	CONSTRAINT [PK_Profile_Id] PRIMARY KEY ([Id] ASC),
-	CONSTRAINT [FK_Profile_Account_AccountId] FOREIGN KEY ([AccountId]) REFERENCES [dbo].[Account] ([Id])
+	CONSTRAINT [FK_Profile_Account_AccountId] FOREIGN KEY ([AccountId]) REFERENCES [dbo].[Account] ([Id]),
+	CONSTRAINT [FK_Profile_Occupation_OccupationId] FOREIGN KEY ([OccupationId]) REFERENCES [dbo].[Occupation] ([Id])
 )
