@@ -86,6 +86,8 @@
     <None Include="HalogenDatabase.local.linux.xml" />
     <None Include="Profiles\HalogenDatabase.local.linux.publish.xml" />
     <None Include="Profiles\HalogenDatabase.local.windows.publish.xml" />
+    <None Include="PostDeployment\Address.PostDeployment.sql" />
+    <None Include="PostDeployment\ProfileAddress.PostDeployment.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="PostDeployment\Currency.PostDeployment.sql" />

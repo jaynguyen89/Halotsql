@@ -4,3 +4,5 @@
 :r .\Locality.PostDeployment.sql
 :r .\LocalityDivision.PostDeployment.sql
 :r .\Occupation.PostDeployment.sql
+:r .\Address.PostDeployment.sql
+:r .\ProfileAddress.PostDeployment.sql
