@@ -89,6 +89,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="PostDeployment\Currency.PostDeployment.sql" />
+    <PostDeploy Include="PostDeployment\PostDeployment.Index.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="PostDeployment\Interest.PostDeployment.sql" />
@@ -103,7 +104,7 @@
     <None Include="PostDeployment\Role.PostDeployment.sql" />
   </ItemGroup>
   <ItemGroup>
-    <PostDeploy Include="PostDeployment\Occupation.PostDeployment.sql" />
+    <None Include="PostDeployment\Occupation.PostDeployment.sql" />
   </ItemGroup>
   <Import Project="$(NETCoreTargetsPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" Condition="'$(NetCoreBuild)' == 'true'" />
   <Target Name="BeforeBuild">
